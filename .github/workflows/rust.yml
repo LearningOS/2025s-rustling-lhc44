@@ -66,6 +66,7 @@ jobs:
           -H "accept: application/json;charset=utf-8" \
           -H "Content-Type: application/json" \
           -H "token: $token" \
+          -H "api: $post_api" \
           -d "$(cat $summary_file)" \
           -v
         echo "$post_api"
