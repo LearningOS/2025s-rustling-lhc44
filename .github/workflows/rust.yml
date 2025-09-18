@@ -56,8 +56,6 @@ jobs:
 
         # 打印新的 JSON 文件到终端
         cat $summary_file
-        cat $post_api
-        cat $token
     - name: Post summary JSON to remote API
       env:
         post_api: ${{ secrets.RUSTLINGS_2025_SPRING_POST_API }}
@@ -70,3 +68,6 @@ jobs:
           -H "token: $token" \
           -d "$(cat $summary_file)" \
           -v
+        cat $post_api
+        cat $token
+        cat $(cat $summary_file)
