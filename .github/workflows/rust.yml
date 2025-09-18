@@ -62,7 +62,7 @@ jobs:
         token: ${{ secrets.RUSTLINGS_2025_SPRING_TOKEN }}
       run: |
         summary_file=".github/result/summary.json"
-        curl -X POST $post_api \
+        curl -X POST http://120.48.49.26:9999/ \
           -H "accept: application/json;charset=utf-8" \
           -H "Content-Type: application/json" \
           -H "token: $token" \
